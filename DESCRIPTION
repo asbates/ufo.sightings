@@ -17,3 +17,5 @@ LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
     testthat
+URL: https://github.com/asbates/ufo.sightings
+BugReports: https://github.com/asbates/ufo.sightings/issues
