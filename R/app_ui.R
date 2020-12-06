@@ -15,27 +15,7 @@ app_ui <- function(request) {
       dashboardHeader(title = "UFO Sightings"),
       dashboardSidebar(),
       dashboardBody(
-        fluidRow(
-          valueBox(
-            value = scales::comma(12345),
-            subtitle = "Total UFO Sightings",
-            #icon = icon("binoculars"),
-            color = "olive"
-          ),
-          valueBox(
-            value = 45,
-            subtitle = "Average Sightings Per Year",
-            icon = icon("eye"),
-            color = "olive"
-          ),
-          valueBox(
-            value = 86,
-            subtitle = "Most Sightings In A Year",
-            icon = icon("glasses"),
-            color = "olive"
-          )
-        ),
-
+        mod_national_value_boxes_ui("national_value_boxes_ui_1"),
         fluidRow(
           column(width = 12,
             box(

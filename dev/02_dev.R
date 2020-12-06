@@ -19,7 +19,8 @@
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-#golem::add_module( name = "name_of_module1" ) # Name of the module
+# --- for national level page ---
+golem::add_module( name = "national_value_boxes" )
 #golem::add_module( name = "name_of_module2" ) # Name of the module
 
 ## Add helper functions ----
