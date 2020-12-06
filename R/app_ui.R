@@ -18,11 +18,7 @@ app_ui <- function(request) {
         mod_national_value_boxes_ui("national_value_boxes_ui_1"),
         fluidRow(
           column(width = 12,
-            box(
-              plotlyOutput("sighting_locations"),
-              title = "UFO Sighting Locations",
-              width = NULL
-            ),
+            mod_national_map_ui("national_map_ui_1"),
             box(
               plotlyOutput("sightings_over_time_us"),
               title = "Sightings Over Time",
