@@ -19,11 +19,7 @@ app_ui <- function(request) {
         fluidRow(
           column(width = 12,
             mod_national_map_ui("national_map_ui_1"),
-            box(
-              plotlyOutput("sightings_over_time_us"),
-              title = "Sightings Over Time",
-              width = NULL
-            )
+            mod_national_ts_ui("national_ts_ui_1")
           )
         )
       )
