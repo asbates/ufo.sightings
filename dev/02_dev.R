@@ -19,8 +19,11 @@
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-#golem::add_module( name = "name_of_module1" ) # Name of the module
-#golem::add_module( name = "name_of_module2" ) # Name of the module
+# --- for national level page ---
+golem::add_module( name = "national_value_boxes" )
+golem::add_module( name = "national_map" )
+golem::add_module( name = "national_ts" )
+golem::add_module( name = "national_main" ) # main module for national page
 
 ## Add helper functions ----
 ## Creates ftc_* and utils_*

@@ -4,7 +4,6 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import shinydashboard
-#' @import plotly
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -15,41 +14,7 @@ app_ui <- function(request) {
       dashboardHeader(title = "UFO Sightings"),
       dashboardSidebar(),
       dashboardBody(
-        fluidRow(
-          valueBox(
-            value = scales::comma(12345),
-            subtitle = "Total UFO Sightings",
-            #icon = icon("binoculars"),
-            color = "olive"
-          ),
-          valueBox(
-            value = 45,
-            subtitle = "Average Sightings Per Year",
-            icon = icon("eye"),
-            color = "olive"
-          ),
-          valueBox(
-            value = 86,
-            subtitle = "Most Sightings In A Year",
-            icon = icon("glasses"),
-            color = "olive"
-          )
-        ),
-
-        fluidRow(
-          column(width = 12,
-            box(
-              plotlyOutput("sighting_locations"),
-              title = "UFO Sighting Locations",
-              width = NULL
-            ),
-            box(
-              plotlyOutput("sightings_over_time_us"),
-              title = "Sightings Over Time",
-              width = NULL
-            )
-          )
-        )
+        mod_national_main_ui("national_main_ui_1")
       )
     )
   )

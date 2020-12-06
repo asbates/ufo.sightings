@@ -3,17 +3,10 @@
 #' @param input,output,session Internal parameters for {shiny}.
 #'     DO NOT REMOVE.
 #' @import shiny
-#' @import plotly
-#' @importFrom shinipsum random_ggplotly
 #' @noRd
 app_server <- function( input, output, session ) {
   # List the first level callModules here
 
-  output$sighting_locations <- renderPlotly({
-    random_ggplotly(type = "contour")
-  })
+  callModule(mod_national_main_server, "national_main_ui_1")
 
-  output$sightings_over_time_us <- renderPlotly({
-    random_ggplotly(type = "line")
-  })
 }
