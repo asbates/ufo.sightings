@@ -4,7 +4,6 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @import shinydashboard
-#' @import plotly
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -15,13 +14,7 @@ app_ui <- function(request) {
       dashboardHeader(title = "UFO Sightings"),
       dashboardSidebar(),
       dashboardBody(
-        mod_national_value_boxes_ui("national_value_boxes_ui_1"),
-        fluidRow(
-          column(width = 12,
-            mod_national_map_ui("national_map_ui_1"),
-            mod_national_ts_ui("national_ts_ui_1")
-          )
-        )
+        mod_national_main_ui("national_main_ui_1")
       )
     )
   )

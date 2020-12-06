@@ -23,6 +23,7 @@
 golem::add_module( name = "national_value_boxes" )
 golem::add_module( name = "national_map" )
 golem::add_module( name = "national_ts" )
+golem::add_module( name = "national_main" ) # main module for national page
 
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
