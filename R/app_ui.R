@@ -12,9 +12,33 @@ app_ui <- function(request) {
     # List the first level UI elements here
     dashboardPage(skin = "green",
       dashboardHeader(title = "UFO Sightings"),
-      dashboardSidebar(),
+      dashboardSidebar(
+        collapsed = TRUE,
+        sidebarMenu(
+          id = "sidebar",
+          menuItem(
+            "National",
+            tabName = "national",
+            icon = icon("flag-usa")
+          ),
+          menuItem(
+            "By State",
+            tabName = "state",
+            icon = icon("map")
+          )
+        )
+      ),
       dashboardBody(
-        mod_national_main_ui("national_main_ui_1")
+        tabItems(
+          tabItem(
+            tabName = "national",
+            mod_national_main_ui("national_main_ui_1")
+          ),
+          tabItem(
+            tabName = "state",
+            mod_state_main_ui("state_main_ui_1")
+          )
+        )
       )
     )
   )

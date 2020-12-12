@@ -25,6 +25,12 @@ golem::add_module( name = "national_map" )
 golem::add_module( name = "national_ts" )
 golem::add_module( name = "national_main" ) # main module for national page
 
+# --- for state level page ---
+golem::add_module( name = "state_value_boxes" )
+golem::add_module( name = "state_map" )
+golem::add_module( name = "state_ts" )
+golem::add_module( name = "state_main" )
+
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
 #golem::add_fct( "helpers" )
