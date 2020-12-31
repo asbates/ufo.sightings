@@ -1,0 +1,42 @@
+#' UFO sightings in each U.S. state.
+#'
+#' A data set containing the date and state of UFO sightings since 1970.
+#'
+#' @format A data frame with 63496 rows and 2 columns.
+#'
+#' \describe{
+#'   \item{date}{date of sighting}
+#'   \item{state}{state where sighting occured}
+#' }
+#'
+#' @source \url{https://www.kaggle.com/NUFORC/ufo-sightings}
+"sightings"
+
+
+
+#' UFO sighting counts by U.S. state
+#'
+#' A data set containing UFO sighting counts for each state. Also contains
+#'  simple features needed for plotting.
+#'
+#' @format A simple features data frame with 51 rows and 3 columns.
+#'
+#' \describe{
+#'   \item{state}{state where sighting occured}
+#'   \item{sightings}{number of sightings in that state}
+#'   \item{geometry}{simple features list-column containing state boundaries}
+#'   }
+"total_sightings_by_state"
+
+#' UFO sighting counts by U.S. state
+#'
+#' A Dorling cartogram containing UFO sighting counts for each state.
+#'
+#' @format A simple features data frame with 51 rows and 3 columns.
+#'
+#' \describe{
+#'   \item{state}{state where sighting occured}
+#'   \item{sightings}{number of sightings in that state}
+#'   \item{geometry}{simple features list-column containing Dorling cartogram}
+#'   }
+"total_sightings_by_state_dor"
