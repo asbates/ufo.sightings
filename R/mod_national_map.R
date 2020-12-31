@@ -7,12 +7,13 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
+#' @importFrom scales comma
 #' @import plotly
 mod_national_map_ui <- function(id){
   ns <- NS(id)
   tagList(
     box(
-      plotlyOutput(ns("national_sighting_locations")),
+      plotlyOutput(ns("sightings_per_state_map")),
       title = "UFO Sighting Locations",
       width = NULL
     )
@@ -27,8 +28,26 @@ mod_national_map_ui <- function(id){
 mod_national_map_server <- function(input, output, session){
   ns <- session$ns
 
-  output$national_sighting_locations <- renderPlotly({
-    random_ggplotly(type = "contour")
+  total_sightings_by_state <- ufo.sightings::total_sightings_by_state
+  total_sightings_by_state_dor <- ufo.sightings::total_sightings_by_state_dor
+
+  output$sightings_per_state_map <- renderPlotly({
+
+    plot_ly(stroke = I("black"), span = I(1)) %>%
+      add_sf(
+        data = total_sightings_by_state,
+        color = I("gray95"),
+        hoverinfo = "none"
+      ) %>%
+      add_sf(
+        data = total_sightings_by_state_dor,
+        color = ~sightings,
+        split = ~state,
+        text = ~paste(paste0(state, ":"), scales::comma(sightings)),
+        hoverinfo = "text",
+        hoveron = "fills"
+      ) %>%
+      layout(showlegend = FALSE)
   })
 
 }
