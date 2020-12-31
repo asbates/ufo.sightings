@@ -7,12 +7,13 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
+#' @importFrom scales comma
 mod_national_ts_ui <- function(id){
   ns <- NS(id)
   tagList(
     box(
       plotlyOutput(ns("national_sightings_ts")),
-      title = "Sightings Over Time",
+      title = "Monthly Number of UFO Sightings In The U.S.",
       width = NULL
     )
   )
@@ -26,8 +27,28 @@ mod_national_ts_ui <- function(id){
 mod_national_ts_server <- function(input, output, session){
   ns <- session$ns
 
+  monthly_sightings <- ufo.sightings::monthly_sightings
+
   output$national_sightings_ts <- renderPlotly({
-    random_ggplotly(type = "line")
+
+    plot_ly(
+      monthly_sightings,
+      x = ~ date,
+      y = ~ sightings,
+      hoverinfo = "text"
+    ) %>%
+      add_lines(
+        text = ~paste0(
+          paste(month, year),
+          ": ",
+          scales::comma(sightings, accuracy = 1)
+          )
+      ) %>%
+      layout(
+        xaxis = list(title = "Date"),
+        yaxis = list(title = "Number of sightings")
+      )
+
   })
 }
 
