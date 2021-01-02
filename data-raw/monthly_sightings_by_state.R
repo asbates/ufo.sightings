@@ -31,4 +31,18 @@ monthly_sightings_by_state <- monthly_sightings_by_state %>%
     -yearmon
   )
 
+state_names_abb <- tibble(
+  name = state.name,
+  abb = state.abb
+)
+
+monthly_sightings_by_state <- monthly_sightings_by_state %>%
+  left_join(state_names_abb, by = c("state" = "abb")) %>%
+  select(
+    -state
+  ) %>%
+  rename(state = name)
+
+
+
 usethis::use_data(monthly_sightings_by_state, overwrite = TRUE)

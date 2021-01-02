@@ -9,10 +9,10 @@ A data frame with 26571 rows and 5 columns.
 
 \describe{
   \item{date}{date of sighting, rounded down to first day of the month}
-  \item{state}{state where the sighting occured}
   \item{sightings}{number of sightings in that month}
   \item{year}{year of the sighting}
   \item{month}{month of the sighting}
+  \item{state}{state where the sighting occured}
 }
 }
 \usage{
