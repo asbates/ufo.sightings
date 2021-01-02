@@ -14,7 +14,7 @@ mod_national_map_ui <- function(id){
   tagList(
     box(
       plotlyOutput(ns("sightings_per_state_map")),
-      title = "UFO Sighting Locations",
+      title = "Total Number of UFO Sightings In The U.S",
       width = NULL
     )
   )
@@ -43,7 +43,10 @@ mod_national_map_server <- function(input, output, session){
         data = total_sightings_by_state_dor,
         color = ~sightings,
         split = ~state,
-        text = ~paste(paste0(state, ":"), scales::comma(sightings)),
+        text = ~paste(
+          paste0(state, ":"),
+          scales::comma(sightings, accuracy = 1)
+          ),
         hoverinfo = "text",
         hoveron = "fills"
       ) %>%
