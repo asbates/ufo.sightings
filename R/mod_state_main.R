@@ -13,7 +13,6 @@ mod_state_main_ui <- function(id){
     mod_state_value_boxes_ui(ns("state_value_boxes_ui_1")),
     fluidRow(
       column(width = 12,
-             mod_state_map_ui(ns("state_map_ui_1")),
              mod_state_ts_ui(ns("state_ts_ui_1"))
       )
     )
@@ -25,8 +24,6 @@ mod_state_main_ui <- function(id){
 #' @noRd
 mod_state_main_server <- function(input, output, session){
   ns <- session$ns
-
-  callModule(mod_state_map_server, "state_map_ui_1")
 
   callModule(mod_state_ts_server, "state_ts_ui_1")
 
