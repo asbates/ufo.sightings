@@ -13,7 +13,7 @@ mod_state_ts_ui <- function(id){
     fluidRow(
       box(
         plotlyOutput(ns("state_sightings_ts")),
-        title = "Sightings Over Time",
+        title = "Monthly Number of UFO Sightings In",
         width = 10
       ),
       box(
@@ -35,8 +35,39 @@ mod_state_ts_ui <- function(id){
 mod_state_ts_server <- function(input, output, session){
   ns <- session$ns
 
+  monthly_sightings <- reactive({
+
+    monthly_sightings_by_state <- ufo.sightings::monthly_sightings_by_state
+
+    monthly_sightings_by_state[
+      monthly_sightings_by_state$state == input$selected_state
+      ,
+    ]
+
+  })
+
+
   output$state_sightings_ts <- renderPlotly({
-    random_ggplotly(type = "line")
+
+    plot_ly(
+      monthly_sightings(),
+      x = ~ date,
+      y = ~ sightings,
+      hoverinfo = "text"
+    ) %>%
+      add_lines(
+        text = ~paste0(
+          paste(month, year),
+          ": ",
+          scales::comma(sightings, accuracy = 1)
+        )
+      ) %>%
+      layout(
+        xaxis = list(title = "Date"),
+        yaxis = list(title = "Number of sightings"),
+        title = input$selected_state
+      )
+
   })
 
 }

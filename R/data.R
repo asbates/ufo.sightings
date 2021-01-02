@@ -57,3 +57,21 @@
 #'
 #'
 "monthly_sightings"
+
+#' Monthly number of UFO sightings for each state in the U.S.
+#'
+#' A data set containing number of monthly UFO sightings for each state in
+#'  the U.S. since 1970.
+#'
+#' @format A data frame with 26571 rows and 5 columns.
+#'
+#' \describe{
+#'   \item{date}{date of sighting, rounded down to first day of the month}
+#'   \item{sightings}{number of sightings in that month}
+#'   \item{year}{year of the sighting}
+#'   \item{month}{month of the sighting}
+#'   \item{state}{state where the sighting occured}
+#' }
+#'
+#'
+"monthly_sightings_by_state"
