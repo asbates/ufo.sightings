@@ -28,6 +28,8 @@ mod_national_main_ui <- function(id){
 mod_national_main_server <- function(input, output, session){
   ns <- session$ns
 
+  callModule(mod_national_value_boxes_server, "national_value_boxes_ui_1")
+
   callModule(mod_national_map_server, "national_map_ui_1")
 
   callModule(mod_national_ts_server, "national_ts_ui_1")
