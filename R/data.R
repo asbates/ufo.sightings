@@ -6,6 +6,7 @@
 #'
 #' \describe{
 #'   \item{date}{date of sighting}
+#'   \item{shape}{shape of the UFO}
 #'   \item{state}{state where sighting occured}
 #' }
 #'
@@ -105,4 +106,4 @@
 #' }
 #'
 #'
-"monthly_sightings_by_state"
+"monthly_sightings_by_shape"

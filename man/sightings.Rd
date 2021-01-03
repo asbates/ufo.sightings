@@ -9,6 +9,7 @@ A data frame with 63496 rows and 2 columns.
 
 \describe{
   \item{date}{date of sighting}
+  \item{shape}{shape of the UFO}
   \item{state}{state where sighting occured}
 }
 }

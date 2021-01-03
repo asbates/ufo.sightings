@@ -18,10 +18,11 @@ test_that(
     skip_on_cran()
     skip_on_travis()
     skip_on_appveyor()
+    skip_if_not(interactive()) # https://github.com/ThinkR-open/golem/issues/410
     x <- processx::process$new(
-      "R", 
+      "R",
       c(
-        "-e", 
+        "-e",
         "pkgload::load_all(here::here());run_app()"
       )
     )
