@@ -42,7 +42,8 @@ mod_national_ts_server <- function(input, output, session){
           paste(month, year),
           ": ",
           scales::comma(sightings, accuracy = 1)
-          )
+          ),
+        color = I("#00a65a")
       ) %>%
       layout(
         xaxis = list(title = "Date"),
