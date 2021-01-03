@@ -75,3 +75,17 @@
 #'
 #'
 "monthly_sightings_by_state"
+
+#' Number of sightings for each UFO shape.
+#'
+#' A data set containing the number of sightings for each UFO shape.
+#'
+#' @format A data frame with 28 rows and 2 columns.
+#'
+#' \describe{
+#'   \item{shape}{the shape of the sighting}
+#'   \item{sightings}{number of sightings for that shape}
+#' }
+#'
+#'
+"shape_counts"
