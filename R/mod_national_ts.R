@@ -22,7 +22,6 @@ mod_national_ts_ui <- function(id){
 #' national_ts Server Function
 #'
 #' @import plotly
-#' @importFrom shinipsum random_ggplotly
 #' @noRd
 mod_national_ts_server <- function(input, output, session){
   ns <- session$ns

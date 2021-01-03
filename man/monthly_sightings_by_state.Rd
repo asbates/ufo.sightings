@@ -14,26 +14,12 @@ A data frame with 26571 rows and 5 columns.
   \item{month}{month of the sighting}
   \item{state}{state where the sighting occured}
 }
-
-A data frame with 14588 rows and 5 columns.
-
-\describe{
-  \item{date}{date of sighting, rounded down to first day of the month}
-  \item{shape}{the shape of the UFO}
-  \item{sightings}{number of sightings for that shape and month}
-  \item{year}{year of the sighting}
-  \item{month}{month of the sighting}
-}
 }
 \usage{
-monthly_sightings_by_state
-
 monthly_sightings_by_state
 }
 \description{
 A data set containing number of monthly UFO sightings for each state in
  the U.S. since 1970.
-
-A data set containing number of monthly UFO sightings for each shape.
 }
 \keyword{datasets}

@@ -17,6 +17,8 @@ mod_state_value_boxes_ui <- function(id){
 
 #' state_value_boxes Server Function
 #'
+#' @importFrom stats na.omit
+#'
 #' @noRd
 mod_state_value_boxes_server <- function(input, output, session, selected_state){
   ns <- session$ns
@@ -47,7 +49,7 @@ mod_state_value_boxes_server <- function(input, output, session, selected_state)
   # for last seen date
   # b/c implicit NAs, need to remove to get last month of actual sighting
   last_seen_date <- reactive({
-    no_na <- na.omit(monthly_sightings())
+    no_na <- stats::na.omit(monthly_sightings())
     month <- no_na[
       order(no_na$date, decreasing = TRUE),
       "month",

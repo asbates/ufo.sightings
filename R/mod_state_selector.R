@@ -7,6 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
+#' @import datasets
 mod_state_selector_ui <- function(id){
   ns <- NS(id)
   tagList(
@@ -14,7 +15,7 @@ mod_state_selector_ui <- function(id){
       selectInput(
         ns("selected_state"),
         "Select a State",
-        choices = state.name,
+        choices = datasets::state.name,
         selected = "New Mexico"
       ),
       width = 4
