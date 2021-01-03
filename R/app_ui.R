@@ -30,6 +30,11 @@ app_ui <- function(request) {
             "UFO Shapes",
             tabName = "shapes",
             icon = icon("shapes")
+          ),
+          menuItem(
+            "Source Code",
+            icon = icon("file-code-o"),
+            href = "https://github.com/asbates/ufo.sightings/"
           )
         )
       ),
