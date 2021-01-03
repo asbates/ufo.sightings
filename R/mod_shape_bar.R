@@ -27,12 +27,14 @@ mod_shape_bar_server <- function(input, output, session){
   shape_counts <- ufo.sightings::shape_counts
 
   output$shape_bar_chart <- renderPlotly({
-
+    # color for marker is same as for dashboard skin
+    # see shinydashboard/inst/AdminLTE/_all_skins.css '.skin-green'
     plot_ly(
       shape_counts,
       x = ~ shape,
       y = ~ sightings,
-      hoverinfo = "text"
+      hoverinfo = "text",
+      marker = list(color = "#00a65a")
     ) %>%
       add_bars(
         text = ~paste(scales::comma(sightings, accuracy = 1))
