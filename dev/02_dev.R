@@ -17,6 +17,12 @@
 ## Add one line by package you want to add as dependency
 #usethis::use_package( "thinkr" )
 
+# -- adds maggritr pipe ---
+# used in generating plots
+usethis::use_pipe(export = FALSE)
+# then follow directions
+# i put the roxygen comment in app_server.R
+
 ## Add modules ----
 ## Create a module infrastructure in R/
 # --- for national level page ---
