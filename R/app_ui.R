@@ -17,12 +17,12 @@ app_ui <- function(request) {
         sidebarMenu(
           id = "sidebar",
           menuItem(
-            "National",
+            "National Overview",
             tabName = "national",
             icon = icon("flag-usa")
           ),
           menuItem(
-            "By State",
+            "State Overview",
             tabName = "state",
             icon = icon("map")
           )
