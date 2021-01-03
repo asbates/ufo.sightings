@@ -32,6 +32,11 @@ golem::add_module( name = "state_ts" )
 golem::add_module( name = "state_main" )
 golem::add_module( name = "state_selector" )
 
+# --- for shapes page ---
+golem::add_module( name = "shape_bar" )
+golem::add_module( name = "shape_ts" )
+golem::add_module( name = "shape_main" )
+
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
 #golem::add_fct( "helpers" )

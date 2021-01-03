@@ -11,4 +11,6 @@ app_server <- function( input, output, session ) {
 
   callModule(mod_state_main_server, "state_main_ui_1")
 
+  callModule(mod_shape_main_server, "shape_main_ui_1")
+
 }
