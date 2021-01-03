@@ -10,29 +10,18 @@
 mod_state_ts_ui <- function(id){
   ns <- NS(id)
   tagList(
-    fluidRow(
       box(
         plotlyOutput(ns("state_sightings_ts")),
         title = "Monthly Number of UFO Sightings In",
-        width = 10
-      ),
-      box(
-        selectInput(
-          ns("selected_state"),
-          "Select a State",
-          choices = state.name,
-          selected = "New Mexico"
-        ),
-        width = 2
+        width = 12
       )
-    )
   )
 }
 
 #' state_ts Server Function
 #'
 #' @noRd
-mod_state_ts_server <- function(input, output, session){
+mod_state_ts_server <- function(input, output, session, selected_state){
   ns <- session$ns
 
   monthly_sightings <- reactive({
@@ -40,7 +29,7 @@ mod_state_ts_server <- function(input, output, session){
     monthly_sightings_by_state <- ufo.sightings::monthly_sightings_by_state
 
     monthly_sightings_by_state[
-      monthly_sightings_by_state$state == input$selected_state
+      monthly_sightings_by_state$state == selected_state()
       ,
     ]
 
@@ -65,7 +54,7 @@ mod_state_ts_server <- function(input, output, session){
       layout(
         xaxis = list(title = "Date"),
         yaxis = list(title = "Number of sightings"),
-        title = input$selected_state
+        title = selected_state()
       )
 
   })

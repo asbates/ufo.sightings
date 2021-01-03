@@ -10,7 +10,10 @@
 mod_state_main_ui <- function(id){
   ns <- NS(id)
   tagList(
-    mod_state_value_boxes_ui(ns("state_value_boxes_ui_1")),
+    fluidRow(
+      mod_state_selector_ui(ns("state_selector")),
+      mod_state_value_boxes_ui(ns("state_value_boxes_ui_1"))
+      ),
     fluidRow(
       column(width = 12,
              mod_state_ts_ui(ns("state_ts_ui_1"))
@@ -25,7 +28,9 @@ mod_state_main_ui <- function(id){
 mod_state_main_server <- function(input, output, session){
   ns <- session$ns
 
-  callModule(mod_state_ts_server, "state_ts_ui_1")
+  state <- callModule(mod_state_selector_server, "state_selector")
+  callModule(mod_state_value_boxes_server, "state_value_boxes_ui_1", state)
+  callModule(mod_state_ts_server, "state_ts_ui_1", state)
 
 }
 
