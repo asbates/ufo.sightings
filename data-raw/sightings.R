@@ -43,7 +43,8 @@ sightings <- raw %>%
   filter(year(date) > 1970) %>%
   select(
     date,
-    state
+    state,
+    shape
   )
 
 write_csv(sightings, "data-raw/sightings.csv")

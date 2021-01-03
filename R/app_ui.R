@@ -25,6 +25,11 @@ app_ui <- function(request) {
             "State Overview",
             tabName = "state",
             icon = icon("map")
+          ),
+          menuItem(
+            "UFO Shapes",
+            tabName = "shapes",
+            icon = icon("shapes")
           )
         )
       ),
@@ -37,6 +42,10 @@ app_ui <- function(request) {
           tabItem(
             tabName = "state",
             mod_state_main_ui("state_main_ui_1")
+          ),
+          tabItem(
+            tabName = "shapes",
+            mod_shape_main_ui("shape_main_ui_1")
           )
         )
       )
