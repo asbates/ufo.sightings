@@ -26,13 +26,19 @@ This app also uses [shinydashboard](https://rstudio.github.io/shinydashboard/),
 
 ## Installation
 
-Since the application was built using the `golem` framework, you can install
- it like you would an R package:
+Since the application was built using the `golem` framework it's actually an R
+ package, with some additional structure.
+You can run it locally by downloading this repository and running the 
+ `run_dev.R` file in the `dev/` folder.
+ 
+You can also install it with 
 
-``` r
+```
 remotes::install_github("asbates/ufosightings")
 ```
 
-If you do install the app locally, you can run it with the `run_dev.R` file in
- the `dev/` folder.
+and then run
 
+```
+ufosightings::run_app()
+```
