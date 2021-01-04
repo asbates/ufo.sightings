@@ -1,4 +1,4 @@
 library(testthat)
-library(ufo.sightings)
+library(ufosightings)
 
-test_check("ufo.sightings")
+test_check("ufosightings")

@@ -26,7 +26,7 @@ mod_state_ts_server <- function(input, output, session, selected_state){
 
   monthly_sightings <- reactive({
 
-    monthly_sightings_by_state <- ufo.sightings::monthly_sightings_by_state
+    monthly_sightings_by_state <- ufosightings::monthly_sightings_by_state
 
     monthly_sightings_by_state[
       monthly_sightings_by_state$state == selected_state()

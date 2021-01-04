@@ -24,7 +24,7 @@ mod_shape_bar_ui <- function(id){
 mod_shape_bar_server <- function(input, output, session){
   ns <- session$ns
 
-  shape_counts <- ufo.sightings::shape_counts
+  shape_counts <- ufosightings::shape_counts
 
   output$shape_bar_chart <- renderPlotly({
     # color for marker is same as for dashboard skin

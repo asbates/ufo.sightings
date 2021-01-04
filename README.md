@@ -30,7 +30,7 @@ Since the application was built using the `golem` framework, you can install
  it like you would an R package:
 
 ``` r
-remotes::install_github("asbates/ufo.sightings")
+remotes::install_github("asbates/ufosightings")
 ```
 
 *UFO Sightings* is not yet available on the web but you can run it locally
