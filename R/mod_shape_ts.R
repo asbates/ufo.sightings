@@ -65,7 +65,7 @@ mod_shape_ts_server <- function(input, output, session){
   ns <- session$ns
 
   monthly_sightings <- reactive({
-    monthly_sightings_by_shape <- ufo.sightings::monthly_sightings_by_shape
+    monthly_sightings_by_shape <- ufosightings::monthly_sightings_by_shape
 
     monthly_sightings_by_shape[
       monthly_sightings_by_shape$shape == input$selected_shape

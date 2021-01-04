@@ -1,4 +1,4 @@
-Package: ufo.sightings
+Package: ufosightings
 Title: UFO Sightings Dashboard
 Version: 0.0.0.9000
 Authors@R: person('Andrew', 'Bates', email = 'andrewbates73@gmail.com', role = c('cre', 'aut'))
@@ -21,7 +21,7 @@ RoxygenNote: 7.1.1
 Suggests: 
     testthat,
     processx
-URL: https://github.com/asbates/ufo.sightings
-BugReports: https://github.com/asbates/ufo.sightings/issues
+URL: https://github.com/asbates/ufosightings
+BugReports: https://github.com/asbates/ufosightings/issues
 Depends: 
     R (>= 2.10)

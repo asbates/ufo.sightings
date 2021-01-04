@@ -27,8 +27,8 @@ mod_national_map_ui <- function(id){
 mod_national_map_server <- function(input, output, session){
   ns <- session$ns
 
-  total_sightings_by_state <- ufo.sightings::total_sightings_by_state
-  total_sightings_by_state_dor <- ufo.sightings::total_sightings_by_state_dor
+  total_sightings_by_state <- ufosightings::total_sightings_by_state
+  total_sightings_by_state_dor <- ufosightings::total_sightings_by_state_dor
 
   output$sightings_per_state_map <- renderPlotly({
 

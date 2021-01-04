@@ -66,7 +66,7 @@ usethis::use_data_raw(name = "sightings")
 # Documentation
 
 ## Vignette ----
-#usethis::use_vignette("ufo.sightings")
+#usethis::use_vignette("ufosightings")
 #devtools::build_vignettes()
 
 ## Code coverage ----

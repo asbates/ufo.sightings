@@ -14,7 +14,7 @@
 ## Fill the DESCRIPTION ----
 ## Add meta data about your application
 golem::fill_desc(
-  pkg_name = "ufo.sightings",
+  pkg_name = "ufosightings",
   pkg_title = "UFO Sightings Dashboard",
   pkg_description = "A dashboard of UFO sightings in the U.S.",
   author_first_name = "Andrew",

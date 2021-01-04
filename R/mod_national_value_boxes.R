@@ -24,7 +24,7 @@ mod_national_value_boxes_ui <- function(id){
 mod_national_value_boxes_server <- function(input, output, session){
   ns <- session$ns
 
-  sightings <- ufo.sightings::sightings
+  sightings <- ufosightings::sightings
 
   output$total_sightings_vb <- renderValueBox({
     valueBox(

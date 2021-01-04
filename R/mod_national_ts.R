@@ -26,7 +26,7 @@ mod_national_ts_ui <- function(id){
 mod_national_ts_server <- function(input, output, session){
   ns <- session$ns
 
-  monthly_sightings <- ufo.sightings::monthly_sightings
+  monthly_sightings <- ufosightings::monthly_sightings
 
   output$national_sightings_ts <- renderPlotly({
 

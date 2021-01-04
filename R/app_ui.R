@@ -34,7 +34,7 @@ app_ui <- function(request) {
           menuItem(
             "Source Code",
             icon = icon("file-code-o"),
-            href = "https://github.com/asbates/ufo.sightings/"
+            href = "https://github.com/asbates/ufosightings/"
           )
         )
       ),
@@ -76,7 +76,7 @@ golem_add_external_resources <- function(){
     favicon(),
     bundle_resources(
       path = app_sys('app/www'),
-      app_title = 'ufo.sightings'
+      app_title = 'ufosightings'
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
