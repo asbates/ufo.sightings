@@ -3,6 +3,7 @@
 export(run_app)
 import(datasets)
 import(plotly)
+import(sf)
 import(shiny)
 import(shinydashboard)
 importFrom(config,get)

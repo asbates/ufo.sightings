@@ -23,6 +23,7 @@ mod_national_map_ui <- function(id){
 #' national_map Server Function
 #'
 #' @import plotly
+#' @import sf
 #' @noRd
 mod_national_map_server <- function(input, output, session){
   ns <- session$ns

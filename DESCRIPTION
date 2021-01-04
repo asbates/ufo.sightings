@@ -1,6 +1,6 @@
 Package: ufosightings
 Title: UFO Sightings Dashboard
-Version: 0.0.0.9000
+Version: 0.0.0.1
 Authors@R: person('Andrew', 'Bates', email = 'andrewbates73@gmail.com', role = c('cre', 'aut'))
 Description: A dashboard of UFO sightings in the U.S.
 License: MIT + file LICENSE
@@ -14,7 +14,8 @@ Imports:
     scales,
     stats,
     datasets,
-    pkgload
+    pkgload,
+    sf
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
