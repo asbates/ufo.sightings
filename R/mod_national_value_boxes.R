@@ -30,8 +30,7 @@ mod_national_value_boxes_server <- function(input, output, session){
     valueBox(
       value = scales::comma(nrow(sightings), accuracy = 1),
       subtitle = "Total UFO sightings",
-      icon = icon("binoculars"),
-      color = "olive"
+      icon = "binoculars"
     )
   })
 
@@ -43,8 +42,7 @@ mod_national_value_boxes_server <- function(input, output, session){
         drop = TRUE
         ][1],
       subtitle = "Most recent sighting in",
-      icon = icon("eye"),
-      color = "olive"
+      icon = "eye"
     )
   })
 

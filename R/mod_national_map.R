@@ -15,7 +15,8 @@ mod_national_map_ui <- function(id){
     box(
       plotlyOutput(ns("sightings_per_state_map")),
       title = "Total Number of UFO Sightings In The U.S",
-      width = NULL
+      width = NULL,
+      maximizable = TRUE
     )
   )
 }

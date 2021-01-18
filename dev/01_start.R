@@ -49,10 +49,11 @@ golem::use_recommended_tests()
 # i don't think i need all the recommended packages
 usethis::use_package("shiny")
 usethis::use_package("golem")
-usethis::use_package("shinydashboard")
+#usethis::use_package("shinydashboard") # replaced with bs4Dash
 usethis::use_package("plotly")
 # dev. need to figure out dependencies before shipping/uploading
 usethis::use_package("shinipsum")
+usethis::use_package("bs4Dash")
 
 ## Favicon ----
 # If you want to change the favicon (default is golem's one)

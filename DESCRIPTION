@@ -8,14 +8,14 @@ Imports:
     config,
     golem,
     shiny,
-    shinydashboard,
     plotly,
     magrittr,
     scales,
     stats,
     datasets,
     pkgload,
-    sf
+    sf,
+    bs4Dash
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

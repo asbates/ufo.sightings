@@ -13,7 +13,8 @@ mod_shape_bar_ui <- function(id){
     box(
       plotlyOutput(ns("shape_bar_chart")),
       title = "Number of Sightings of Each Shape",
-      width = 12
+      width = 12,
+      maximizable = TRUE
     )
   )
 }

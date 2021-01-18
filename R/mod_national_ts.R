@@ -14,7 +14,8 @@ mod_national_ts_ui <- function(id){
     box(
       plotlyOutput(ns("national_sightings_ts")),
       title = "Monthly Number of UFO Sightings In The U.S.",
-      width = NULL
+      width = NULL,
+      maximizable = TRUE
     )
   )
 }
