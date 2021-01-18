@@ -14,7 +14,8 @@ mod_state_ts_ui <- function(id){
         plotlyOutput(ns("state_sightings_ts")),
         title = "Monthly Number of UFO Sightings In",
         width = 12,
-        maximizable = TRUE
+        maximizable = TRUE,
+        status = "primary"
       )
   )
 }
@@ -51,12 +52,14 @@ mod_state_ts_server <- function(input, output, session, selected_state){
           ": ",
           scales::comma(sightings, accuracy = 1)
         ),
-        color = I("#00a65a")
+        color = I("#3cd070")
       ) %>%
       layout(
         xaxis = list(title = "Date"),
         yaxis = list(title = "Number of sightings"),
-        title = selected_state()
+        title = selected_state(),
+        plot_bgcolor = "#e6edf2",
+        paper_bgcolor = "#e6edf2"
       )
 
   })

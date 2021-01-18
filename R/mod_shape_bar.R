@@ -14,7 +14,8 @@ mod_shape_bar_ui <- function(id){
       plotlyOutput(ns("shape_bar_chart")),
       title = "Number of Sightings of Each Shape",
       width = 12,
-      maximizable = TRUE
+      maximizable = TRUE,
+      status = "primary"
     )
   )
 }
@@ -35,10 +36,16 @@ mod_shape_bar_server <- function(input, output, session){
       x = ~ shape,
       y = ~ sightings,
       hoverinfo = "text",
-      marker = list(color = "#00a65a")
+      marker = list(color = "#3cd070")
     ) %>%
       add_bars(
         text = ~paste(scales::comma(sightings, accuracy = 1))
+      ) %>%
+      layout(
+        xaxis = list(title = ""),
+        yaxis = list(title = "Number of sightings"),
+        plot_bgcolor = "#e6edf2",
+        paper_bgcolor = "#e6edf2"
       )
   })
 

@@ -1,0 +1,19 @@
+/*
+need a bit of extra css for the brand text color and the color of the
+ dropdown in the selectInput gadgets
+the brand text is in the top of the sidebar (top left corner of page)
+there isn't a variable in bs4dash for this
+*/
+
+.brand-text {
+  color: #C2C7D0;
+}
+
+/* for select input widgets */
+.selectize-input.full {
+  background-color: #e6edf2;
+}
+
+.selectize-dropdown {
+  background-color: #e6edf2;
+}
