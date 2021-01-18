@@ -47,13 +47,15 @@ mod_shape_ts_ui <- function(id){
             "unknown"
           )
         ),
-        width = 2
+        width = 2,
+        status = "primary"
       ),
       box(
         plotlyOutput(ns("shape_sightings_ts")),
         title = "Monthly Number of UFO Sightings In For",
         width = 10,
-        maximizable = TRUE
+        maximizable = TRUE,
+        status = "primary"
       )
     )
   )
@@ -93,7 +95,7 @@ mod_shape_ts_server <- function(input, output, session){
           ": ",
           scales::comma(sightings, accuracy = 1)
         ),
-        marker = list(color = "#00a65a")
+        marker = list(color = "#3cd070")
       ) %>%
         layout(
           xaxis = list(title = "Date"),
@@ -114,12 +116,14 @@ mod_shape_ts_server <- function(input, output, session){
             ": ",
             scales::comma(sightings, accuracy = 1)
           ),
-          color = I("#00a65a")
+          color = I("#3cd070")
         ) %>%
         layout(
           xaxis = list(title = "Date"),
           yaxis = list(title = "Number of sightings"),
-          title = input$selected_shape
+          title = input$selected_shape,
+          plot_bgcolor = "#e6edf2",
+          paper_bgcolor = "#e6edf2"
         )
     }
 

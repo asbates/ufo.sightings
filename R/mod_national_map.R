@@ -16,7 +16,8 @@ mod_national_map_ui <- function(id){
       plotlyOutput(ns("sightings_per_state_map")),
       title = "Total Number of UFO Sightings In The U.S",
       width = NULL,
-      maximizable = TRUE
+      maximizable = TRUE,
+      status = "primary"
     )
   )
 }
@@ -51,7 +52,11 @@ mod_national_map_server <- function(input, output, session){
         hoverinfo = "text",
         hoveron = "fills"
       ) %>%
-      layout(showlegend = FALSE)
+      layout(
+        showlegend = FALSE,
+        plot_bgcolor = "#e6edf2",
+        paper_bgcolor = "#e6edf2"
+      )
   })
 
 }

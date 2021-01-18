@@ -18,7 +18,8 @@ mod_state_selector_ui <- function(id){
         choices = datasets::state.name,
         selected = "New Mexico"
       ),
-      width = 4
+      width = 4,
+      status = "primary"
     )
   )
 }
