@@ -41,8 +41,7 @@ mod_state_value_boxes_server <- function(input, output, session, selected_state)
         accuracy = 0.1
       ),
       subtitle = "Average monthly sightings",
-      icon = icon("eye"),
-      color = "olive"
+      icon = "eye"
     )
   })
 
@@ -68,8 +67,7 @@ mod_state_value_boxes_server <- function(input, output, session, selected_state)
     valueBox(
       value = last_seen_date(),
       subtitle = "Last sighting in",
-      icon = icon("calendar"),
-      color = "olive"
+      icon = "calendar"
     )
   })
 

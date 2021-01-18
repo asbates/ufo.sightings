@@ -17,7 +17,7 @@ mod_shape_main_ui <- function(id){
     #   mod_shape_ts_ui("shape_ts_ui_1")
     # )
     fluidRow(
-      column(width = 12,
+      bs4Dash::column(width = 12,
         mod_shape_bar_ui(ns("shape_bar_ui_1")),
         mod_shape_ts_ui(ns("shape_ts_ui_1"))
       )

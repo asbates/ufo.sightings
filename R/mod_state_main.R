@@ -15,7 +15,7 @@ mod_state_main_ui <- function(id){
       mod_state_value_boxes_ui(ns("state_value_boxes_ui_1"))
       ),
     fluidRow(
-      column(width = 12,
+      bs4Dash::column(width = 12,
              mod_state_ts_ui(ns("state_ts_ui_1"))
       )
     )

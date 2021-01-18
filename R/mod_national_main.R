@@ -6,7 +6,6 @@
 #'
 #' @noRd
 #'
-#' @import shinydashboard
 #'
 #' @importFrom shiny NS tagList
 mod_national_main_ui <- function(id){
@@ -14,7 +13,7 @@ mod_national_main_ui <- function(id){
   tagList(
     mod_national_value_boxes_ui(ns("national_value_boxes_ui_1")),
     fluidRow(
-      column(width = 12,
+      bs4Dash::column(width = 12,
              mod_national_map_ui(ns("national_map_ui_1")),
              mod_national_ts_ui(ns("national_ts_ui_1"))
       )

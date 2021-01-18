@@ -3,38 +3,40 @@
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
 #' @import shiny
-#' @import shinydashboard
+#' @import bs4Dash
 #' @noRd
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here
-    dashboardPage(skin = "green",
-      dashboardHeader(title = "UFO Sightings"),
+    dashboardPage(
+      dashboardHeader(),
       dashboardSidebar(
-        collapsed = TRUE,
+        title = "UFO Sightings",
+        sidebar_collapsed = TRUE,
         sidebarMenu(
           id = "sidebar",
           menuItem(
             "National Overview",
             tabName = "national",
-            icon = icon("flag-usa")
+            icon = "flag-usa"
           ),
           menuItem(
             "State Overview",
             tabName = "state",
-            icon = icon("map")
+            icon = "map"
           ),
           menuItem(
             "UFO Shapes",
             tabName = "shapes",
-            icon = icon("shapes")
+            icon = "shapes"
           ),
           menuItem(
             "Source Code",
-            icon = icon("file-code-o"),
-            href = "https://github.com/asbates/ufosightings/"
+            icon = "file-code",
+            tabName = "source"
+            #href = "https://github.com/asbates/ufosightings/"
           )
         )
       ),
@@ -51,6 +53,22 @@ app_ui <- function(request) {
           tabItem(
             tabName = "shapes",
             mod_shape_main_ui("shape_main_ui_1")
+          ),
+          # temporary workaround b/c current version of bs4Dash doesn't
+          #  allow link in tabItem()
+          # https://github.com/RinteRface/bs4Dash/issues/123
+          # i tried installing dev version of bs4Dash
+          # it required lot's of other dev versions and was broken so reverted
+          tabItem(
+            tabName = "source",
+            tags$html(
+              p(
+                "Find the source code for this app",
+                a("here",
+                  href = "https://github.com/asbates/ufosightings/",
+                  target = "_blank")
+              )
+            )
           )
         )
       )

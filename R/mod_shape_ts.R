@@ -52,7 +52,8 @@ mod_shape_ts_ui <- function(id){
       box(
         plotlyOutput(ns("shape_sightings_ts")),
         title = "Monthly Number of UFO Sightings In For",
-        width = 10
+        width = 10,
+        maximizable = TRUE
       )
     )
   )
