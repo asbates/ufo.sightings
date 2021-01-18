@@ -19,9 +19,11 @@ In particular, I was interested in learning about the
  Shiny modules.
 These are both tools that help make a Shiny app more production ready, which
  is sort of another overarching goal with this project.
-This app also uses [shinydashboard](https://rstudio.github.io/shinydashboard/),
- a package for building dashboards in Shiny, and 
- [plotly](https://plotly.com/r/) for interactive graphics.
+This app also uses [bs4Dash](https://rinterface.github.io/bs4Dash/),
+ a dashboard package built with Bootstrap 4, and 
+ [fresh](https://dreamrs.github.io/fresh/), a package for UI themes
+ and styling.
+For the graphics, I used [plotly](https://plotly.com/r/) for it's interactivity.
 
 
 ## Installation
